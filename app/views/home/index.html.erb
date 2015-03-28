@@ -1,24 +1,23 @@
+
 <p>Welcome!</p>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Exercise</th>
-    <th>Main muscle</th>
-    <th>Indirect action</th>
-    <th>Effect</th>
-    <th>Group</th>
-    <th>sub_group</th>
+    <th>Название</th>
+    <th>Главная мышца</th>
+    <th>Косвенное воздействие</th>
+    <th>Эффективность</th>
+    <th>Группа мышц</th>
+    <th>Подгруппа</th>
     <th colspan="2"></th>
   </tr>
   <% @exercise.each do |exercise| %>
       <tr>
-        <td><%= exercise.Name_exercise %></td>
-        <td><%= exercise %></td>
-        <td><%= exercise.Main_muscle %></td>
-        <td><%= exercise.Indirect_action %></td>
-        <td><%= exercise.Effect %></td>
-        <td><%= exercise.Group %></td>
+        <td><%= exercise.name_exercise %></td>
+        <td><%= exercise.main_muscle %></td>
+        <td><%= exercise.indirect_action %></td>
+        <td><%= exercise.effect %></td>
+        <td><%= exercise.group %></td>
         <td><%= exercise.sub_group %></td>
 
       </tr>
