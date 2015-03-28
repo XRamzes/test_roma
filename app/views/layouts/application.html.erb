@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trainer</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application','https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<% if flash[:notice] %>
+    <div class="alert alert-dismissable alert-success" style="top: 0;position: absolute;width: 100%;">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <%= flash[:notice] %>
+    </div>
+<% end %>
+<% if flash[:alert] %>
+    <div class="alert alert-dismissable alert-danger" style="top: 0;position: absolute;width: 100%;">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <%= flash[:alert] %>
+    </div>
+<% end %>
+<%= render 'layouts/header'%>
+
+<div class="col-md-3 col-xs-4">
+    <%= render 'layouts/left'%>
+</div>
+<div class="col-md-9 col-xs-8">
+    <%= yield %>
+</div>
+</body>
+</html>

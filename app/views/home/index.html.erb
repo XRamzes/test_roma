@@ -1,0 +1,26 @@
+<p>Welcome!</p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Exercise</th>
+    <th>Main muscle</th>
+    <th>Indirect action</th>
+    <th>Effect</th>
+    <th>Group</th>
+    <th>sub_group</th>
+    <th colspan="2"></th>
+  </tr>
+  <% @exercise.each do |exercise| %>
+      <tr>
+        <td><%= exercise.Name_exercise %></td>
+        <td><%= exercise %></td>
+        <td><%= exercise.Main_muscle %></td>
+        <td><%= exercise.Indirect_action %></td>
+        <td><%= exercise.Effect %></td>
+        <td><%= exercise.Group %></td>
+        <td><%= exercise.sub_group %></td>
+
+      </tr>
+  <% end %>
+</table>
