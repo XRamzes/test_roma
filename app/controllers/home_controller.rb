@@ -8,7 +8,4 @@ class HomeController < ApplicationController
     @exercise = Exercise.find(params[:id])
   end
 
-  def create
-    @exercise = Exercise.new(exercise_params)
-  end
 end
