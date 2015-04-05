@@ -1,7 +1,9 @@
 class ProgramController < ApplicationController
 
   def index
-    @program = Program.first_day
+    @first_day = Program.first_day
+    @second_day = Program.first_day
+    @third_dey = Program.first_day
   end
 
 end

@@ -5,12 +5,18 @@ class Program < ActiveRecord::Base
   end
 
   def self.first_day
-    {first: Exercise.find_by(main_muscle:'Грудные', effect:1),
-     second: Exercise.find_by(main_muscle:'Грудные', effect:2),
-     third: Exercise.find_by(main_muscle:'Грудные', effect:3),
-     fourth: Exercise.find_by(main_muscle:'Трицепс', effect:1),
-     fifth: Exercise.find_by(main_muscle:'Трицепс', effect:2),
-     sixth: Exercise.find_by(main_muscle:'Трицепс', effect:3) }
-  end
+    exercises_1 = Exercise.where(main_muscle:'Грудные', effect:1)
+    exercises_2 = Exercise.where(main_muscle:'Грудные', effect:2)
+    exercises_3 = Exercise.where(main_muscle:'Грудные', effect:3)
+    exercises_4 = Exercise.where(main_muscle:'Трицепс', effect:1)
+    exercises_5 = Exercise.where(main_muscle:'Трицепс', effect:2)
+    exercises_6 = Exercise.where(main_muscle:'Трицепс', effect:3)
 
+    {first: exercises_1.shuffle.first,
+     second: exercises_2.shuffle.first,
+     third: exercises_3.shuffle.first,
+     fourth: exercises_4.shuffle.first,
+     fifth: exercises_5.shuffle.first,
+     sixth: exercises_6.shuffle.first}
+  end
 end
