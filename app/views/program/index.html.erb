@@ -1,19 +1,70 @@
+<form id="test_form">
+  <div class="form-group">
+    <label class="control-label" for="aaa">Первый подход</label>
+    <input class="form-control" id="aaa" type="text" placeholder="40 кг">
+  </div>
+  <div class="form-group hidden_f">
+    <label class="control-label" for="bbb">Второй подход</label>
+    <input class="form-control" id="bbb" type="text" placeholder="20 кг">
+  </div>
+  <div class="form-group hidden_f">
+    <label class="control-label" for="ccc">Третий подход</label>
+    <input class="form-control" id="ccc" type="text" placeholder="20 кг">
 
-<p>Welcome!</p>
-
+  </div>
+  <h3 class="hidden_f total_f"></h3>
+</form>
 <table>
   <tr>
-    <th>Понедельник</th>
-    <th>Среда</th>
-    <th>Пятница</th>
+      <td>
+        <th>Понедельник</th>
+      </td>
   </tr>
-
-
-
-      <tr>
-        <td><% @first_exercise.name_exercise %></td>
-      </tr>
-
-
+  <tr>
+      <td>
+        <ol>
+          <li><%= @program[:first].name_exercise %></li>
+          <li><%= @program[:second].name_exercise %></li>
+          <li><%= @program[:third].name_exercise %></li>
+          <li><%= @program[:fourth].name_exercise %></li>
+          <li><%= @program[:fifth].name_exercise %></li>
+          <li><%= @program[:sixth].name_exercise %></li>
+        </ol>
+      </td>
+  </tr>
+  <tr>
+      <td>
+        <th>Среда</th>
+      </td>
+  </tr>
+  <tr>
+      <td>
+        <ol>
+            <li><%= @program[:first].name_exercise %></li>
+            <li><%= @program[:second].name_exercise %></li>
+            <li><%= @program[:third].name_exercise %></li>
+            <li><%= @program[:fourth].name_exercise %></li>
+            <li><%= @program[:fifth].name_exercise %></li>
+            <li><%= @program[:sixth].name_exercise %></li>
+        </ol>
+      </td>
+  </tr>
+  <tr>
+      <td>
+        <th>Пятница</th>
+      </td>
+  </tr>
+  <tr>
+    <td>
+      <ol>
+        <li><%= @program[:first].name_exercise %></li>
+        <li><%= @program[:second].name_exercise %></li>
+        <li><%= @program[:third].name_exercise %></li>
+        <li><%= @program[:fourth].name_exercise %></li>
+        <li><%= @program[:fifth].name_exercise %></li>
+        <li><%= @program[:sixth].name_exercise %></li>
+      </ol>
+     </td>
+  </tr>
 
 </table>
